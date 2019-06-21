@@ -16,3 +16,6 @@ intl_lib = library('intl',
 
 intl_dep = declare_dependency(link_with : intl_lib,
   include_directories : include_directories('.'))
+
+pkg = import('pkgconfig')
+pkg.generate(intl_lib)
